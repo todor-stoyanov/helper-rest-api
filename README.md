@@ -1,2 +1,2 @@
-# imp-rest-api
-IMP courier rest api
+# helper-rest-api
+Helper courier rest api
