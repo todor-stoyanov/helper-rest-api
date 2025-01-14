@@ -64,15 +64,9 @@ class HttpClient
 			curl_close($curl);
 
 			if (strpos($responseContentType,'application/json')!==false || !$responseContentType) {
-				$encoding = mb_detect_encoding($result);
-
 				if(strpos($result,"}")!==false) {
 					$result = trim(substr($result, 0, strrpos( $result, '}')+1));
 				}
-				if ($encoding == 'UTF-8') {
-					//$result = preg_replace('/[^(\x20-\x7F)]*/', '', $result);
-				}
-
 				if($returnAsArray) {
 					$result = json_decode($result, 1);
 				}
