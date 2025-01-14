@@ -70,7 +70,7 @@ class HttpClient
 					$result = trim(substr($result, 0, strrpos( $result, '}')+1));
 				}
 				if ($encoding == 'UTF-8') {
-					$result = preg_replace('/[^(\x20-\x7F)]*/', '', $result);
+					//$result = preg_replace('/[^(\x20-\x7F)]*/', '', $result);
 				}
 
 				if($returnAsArray) {
